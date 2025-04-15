@@ -1,11 +1,12 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1744577124
+::res://::1744751082
 icon.svg::CompressedTexture2D::5707198177249706083::1737906748::1744571550::1::::<><>::
 README.md::TextFile::-1::1737906748::0::1::::<><>::
-Map.tscn::PackedScene::7703006396282558333::1744577112::0::1::::<><>::uid://d12juuwrn5ti::::res://Assets/Sprites/tilesheet_godome.png
-Player.tscn::PackedScene::443879228714033345::1744577124::0::1::::<><>::
+Map.tscn::PackedScene::7703006396282558333::1744751082::0::1::::<><>::uid://d12juuwrn5ti::::res://Assets/Sprites/tilesheet_godome.png<>uid://glavjyc7ch7v::::res://Player.tscn
+Player.tscn::PackedScene::443879228714033345::1744750684::0::1::::<><>::res://Player.cs<>uid://bfsdi5hsq57wt::::res://Assets/Sprites/scifiUnit_12.png
+Player.cs::CSharpScript::-1::1744750100::0::1::::<><>::
 ::res://Assets/::1737908253
-::res://Assets/Sprites/::1744577453
+::res://Assets/Sprites/::1744752412
 floor1.png::CompressedTexture2D::3249034332117041835::1737908253::1744571550::1::::<><>::
 floor2.png::CompressedTexture2D::5561755160135187259::1737908253::1744571550::1::::<><>::
 floor3.png::CompressedTexture2D::887567050529874823::1737908253::1744571550::1::::<><>::
@@ -13,4 +14,4 @@ grass1.png::CompressedTexture2D::1652150771863596169::1737908253::1744571550::1:
 grass2.png::CompressedTexture2D::1379677280873921763::1737908253::1744571550::1::::<><>::
 moss1.png::CompressedTexture2D::4322467167194388509::1737908253::1744571550::1::::<><>::
 scifiUnit_12.png::CompressedTexture2D::2774721726140448623::1744577453::1744577453::1::::<><>::
-tilesheet_godome.png::CompressedTexture2D::265896865855424446::1744575664::1744575666::1::::<><>::
+tilesheet_godome.png::CompressedTexture2D::265896865855424446::1744752425::1744752429::1::::<><>::
