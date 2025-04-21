@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("godome")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e30198e1991213efe99a5f801c9ae1863a3546dc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2210d61d322772de05ff8ed803322e9a4a40b1e5")]
 [assembly: System.Reflection.AssemblyProductAttribute("godome")]
 [assembly: System.Reflection.AssemblyTitleAttribute("godome")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
