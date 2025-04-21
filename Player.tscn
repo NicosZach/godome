@@ -1,15 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://glavjyc7ch7v"]
+[gd_scene load_steps=5 format=3 uid="uid://glavjyc7ch7v"]
 
 [ext_resource type="Script" path="res://Player.cs" id="1_mtkya"]
 [ext_resource type="Texture2D" uid="uid://bfsdi5hsq57wt" path="res://Assets/Sprites/scifiUnit_12.png" id="1_mtr53"]
+[ext_resource type="PackedScene" uid="uid://boli5ja082hju" path="res://Bullet.tscn" id="2_yh0ee"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h17hy"]
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("Gun")]
 texture_filter = 1
 scale = Vector2(0.5, 0.5)
 motion_mode = 1
 script = ExtResource("1_mtkya")
+BulletScene = ExtResource("2_yh0ee")
+Gun = NodePath("BulletSpawn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_h17hy")
@@ -17,3 +20,9 @@ shape = SubResource("CapsuleShape2D_h17hy")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(10, 10)
 texture = ExtResource("1_mtr53")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="BulletSpawn" type="Marker2D" parent="."]
+position = Vector2(100, 0)
+scale = Vector2(17.1726, 20.4954)

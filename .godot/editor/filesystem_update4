@@ -1,3 +1,5 @@
-res://Map.tscn
 res://Player.tscn
 res://Player.cs
+res://Bullet.tscn
+res://Map.tscn
+res://Bullet.cs

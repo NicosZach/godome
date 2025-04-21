@@ -4,6 +4,23 @@ using System;
 public partial class Player : CharacterBody2D
 {
 	public const float Speed = 400.0f;
+	private const float ShootingSpeed = 1.0f;
+	private double _shootingCd = 1.0;
+	[Export]
+	public PackedScene BulletScene { get; set; }
+
+	[Export] public Marker2D Gun;
+
+	public override void _Process(double delta)
+	{	
+		var mousePosition = GetGlobalMousePosition();
+		_shootingCd -= delta;
+		if (Input.IsActionPressed("shoot") && _shootingCd <= 0.0f)
+		{
+			Shoot();
+			_shootingCd = ShootingSpeed;
+		}
+	}
 
 	public override void _PhysicsProcess(double delta)
 	{
@@ -26,5 +43,24 @@ public partial class Player : CharacterBody2D
 
 		Velocity = velocity;
 		MoveAndSlide();
+	}
+
+	private void Shoot()
+	{
+		if (BulletScene != null)
+		{
+			GD.Print("creating bullet scene");
+			Bullet bullet = BulletScene.Instantiate<Bullet>();
+			GetTree().CurrentScene.AddChild(bullet);
+
+			GD.Print("setting bullet position");
+			Vector2 gun = Gun.GlobalPosition;
+			Vector2 mousePosition = GetGlobalMousePosition();
+			
+			Vector2 direction = (mousePosition - gun).Normalized();
+			GD.Print(direction.ToString());
+			bullet.Rotation = direction.Angle();
+			bullet.GlobalPosition = gun;
+		}
 	}
 }
